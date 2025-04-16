@@ -1,68 +1,105 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.cita {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 500px;
+  font-family: sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.cita p {
+  margin: 0.5rem 0;
 }
-a:hover {
-  color: #535bf2;
+
+.cita button {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.cita button:hover {
+  background-color: #c53030;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  background-color: #f8d7da;
+  font-family: sans-serif;
+}
+
+.contenedor-principal {
   display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.seccion-formulario {
+  flex: 1;
+  background-color: #fddde6; /* rosado claro */
+  padding: 2rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.seccion-citas {
+  flex: 2;
+  padding: 2rem;
+  background-color: #f1f5f9;
+}
+
+
+.titulo-formulario {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.formulario label {
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario textarea {
+  resize: none;
+  height: 80px;
+}
+
+.formulario button {
+  background-color: #d62828;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem;
+  margin-top: 1rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.formulario button:hover {
+  background-color: #a91d1d;
 }
+
+
+
+
