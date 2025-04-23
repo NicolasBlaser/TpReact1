@@ -1,74 +1,22 @@
 import { useState } from 'react';
 
 function Formulario() {
-  const [formulario, setFormulario] = useState({
-    mascota: '',
-    dueño: '',
-    fecha: '',
-    hora: '',
-    sintomas: ''
-  });
-
-  const handleChange = (e) => {
-    setFormulario({
-      ...formulario,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Cita enviada:', formulario);
-    // Aquí podrías pasar los datos al padre
-    // y luego reiniciar el formulario si querés.
-  };
-
   return (
-    <>
-      <h2 className="titulo-formulario">Formulario</h2>
-      <form className="formulario" onSubmit={handleSubmit}>
+    <div class="one-half column">
+      <h2>Crear mi Cita</h2>
+      <form>
         <label>Nombre Mascota</label>
-        <input
-          type="text"
-          name="mascota"
-          value={formulario.mascota}
-          onChange={handleChange}
-        />
-
+        <input type="text" name="mascota" class="u-full-width" placeholder="Nombre Mascota" value=""/>
         <label>Nombre Dueño</label>
-        <input
-          type="text"
-          name="dueño"
-          value={formulario.dueño}
-          onChange={handleChange}
-        />
-
+        <input type="text" name="propietario" class="u-full-width" placeholder="Nombre dueño de la mascota" value=""/>
         <label>Fecha</label>
-        <input
-          type="date"
-          name="fecha"
-          value={formulario.fecha}
-          onChange={handleChange}
-        />
-
-        <label>Hora</label>
-        <input
-          type="time"
-          name="hora"
-          value={formulario.hora}
-          onChange={handleChange}
-        />
-
-        <label>Síntomas</label>
-        <textarea
-          name="sintomas"
-          value={formulario.sintomas}
-          onChange={handleChange}
-        ></textarea>
-
-        <button type="submit">AGREGAR CITA</button>
-      </form>
-    </>
+        <input type="date" name="fecha" class="u-full-width" value=""/>
+        <label>hora</label>
+        <input type="time" name="hora" class="u-full-width" value=""/>
+        <label>Sintomas</label>
+        <textarea name="sintomas" class="u-full-width"></textarea>
+        <button type="submit" class="u-full-width button-primary">Agregar Cita</button></form>
+    </div>
   );
 }
 

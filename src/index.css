@@ -1,105 +1,105 @@
-.cita {
-  background-color: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  max-width: 500px;
-  font-family: sans-serif;
-}
-
-.cita p {
-  margin: 0.5rem 0;
-}
-
-.cita button {
-  background-color: #e53e3e;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-.cita button:hover {
-  background-color: #c53030;
+html {
+  min-height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #f8d7da;
   font-family: sans-serif;
+  background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+  min-height: 100%;
+  padding-bottom: 5rem;
 }
 
-.contenedor-principal {
-  display: flex;
-  min-height: 100vh;
+h1,
+h2 {
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+
+  text-transform: uppercase;
+
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 1px;
 }
 
-.seccion-formulario {
-  flex: 1;
-  background-color: #fddde6; /* rosado claro */
-  padding: 2rem;
+.lista-citas .media {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 3rem;
 }
 
-.seccion-citas {
-  flex: 2;
-  padding: 2rem;
-  background-color: #f1f5f9;
+.lista-citas .media:last-of-type {
+  border-bottom: 0;
 }
 
+.lista-citas .media-body p {
+  margin: 0;
+}
 
-.titulo-formulario {
-  font-size: 24px;
+.lista-citas .media-body button {
+  margin-top: 1rem !important;
+}
+
+.lista-citas .media-body span {
   font-weight: bold;
-  margin-bottom: 1rem;
 }
 
-.formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+label {
+  color: white;
 }
 
-.formulario label {
-  font-weight: bold;
-}
-
-.formulario input,
-.formulario textarea {
-  padding: 0.6rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 100%;
+input[type="date"],
+input[type="time"] {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
   box-sizing: border-box;
 }
 
-.formulario textarea {
-  resize: none;
-  height: 80px;
+.cita {
+  padding: 2rem;
+  background: white;
+  border-bottom: 1px solid #e1e1e1;
+  color: black;
+  margin-bottom: 20px;
 }
 
-.formulario button {
-  background-color: #d62828;
-  color: white;
+.cita p {
   font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  padding: 0.8rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-bottom: .8rem;
 }
 
-.formulario button:hover {
-  background-color: #a91d1d;
+.cita p span {
+  font-weight: normal;
+
 }
 
+.cita:first-of-type {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
 
+.cita:last-of-type {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
 
+.button.eliminar,
+.button.eliminar:hover {
+  background-color: #c10059;
+  color: white;
+  margin-top: 2rem;
+}
 
+.alerta-error {
+  background-color: white;
+  color: red;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+}

@@ -1,12 +1,12 @@
 function Cita({ datos }) {
     return (
-      <div className="cita">
-        <p><strong>Mascota:</strong> {datos.mascota}</p>
-        <p><strong>Dueño:</strong> {datos.dueno}</p>
-        <p><strong>Fecha:</strong> {datos.fecha}</p>
-        <p><strong>Hora:</strong> {datos.hora}</p>
-        <p><strong>Síntomas:</strong> {datos.sintomas}</p>
-        <button>ELIMINAR</button>
+      <div class="cita">
+        <p>Mascota: <span>{datos.mascota}</span></p>
+        <p>Dueño: <span>{datos.dueño}</span></p>
+        <p>Fecha: <span>{datos.fecha}</span></p>
+        <p>Hora: <span>{datos.hora}</span></p>
+        <p>Síntomas: <span>{datos.sintomas}</span></p>
+        <button class="button elimnar u-full-width">Eliminar ×</button>
       </div>
     );
   }
