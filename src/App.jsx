@@ -1,18 +1,26 @@
 import Formulario from './Formulario';
-import Cita from './Cita';
 import ListadoCitas from './ListadoCitas';
+import { useState } from 'react';
 
 function App() {
+  const [citas, setCitas] = useState([]);
+
+  const eliminarCita = (indice) => {
+    const nuevasCitas = citas.filter((_, i) => i !== indice);
+    setCitas(nuevasCitas);
+  };
+
   return (
     <>
-        <h1>ADMINISTRADOR DE PACIENTES</h1>
-        <div class="container">
-          <Formulario />
-          <ListadoCitas/>
+      <h1>ADMINISTRADOR DE PACIENTES</h1>
+      <div className="container">
+        <Formulario setCitas={setCitas} citas={citas} />
+        <ListadoCitas citas={citas} eliminarCita={eliminarCita} />
       </div>
     </>
   );
 }
 
 export default App;
+
 
