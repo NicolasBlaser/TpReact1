@@ -9,6 +9,12 @@ function Formulario({ citas, setCitas }) {
 
   const manejarEnvio = (e) => {
     e.preventDefault();
+    if(mascota == "" || duenio == "" || fecha == "" || hora == "" || sintomas == "")
+    {
+      alert("Todos los campos son obligatorios")
+      return;
+    }
+ 
 
     const nuevaCita = {
       mascota: mascota,
@@ -18,11 +24,11 @@ function Formulario({ citas, setCitas }) {
       sintomas: sintomas
     };
 
-    const copia = citas.slice(); // copiar el array original
-    copia.push(nuevaCita); // agregar nueva cita
-    setCitas(copia); // actualizar el estado
+    const copia = citas.slice(); 
+    copia.push(nuevaCita); 
+    setCitas(copia); 
 
-    // limpiar los campos
+    
     setMascota('');
     setDuenio('');
     setFecha('');
