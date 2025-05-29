@@ -1,13 +1,31 @@
 import Formulario from './Formulario';
 import ListadoCitas from './ListadoCitas';
 import { useState } from 'react';
+import { useEffect } from 'react';
+
 
 function App() {
   const [citas, setCitas] = useState([]);
+  useEffect(() => {
+  const citasGuardadas = localStorage.getItem('citas');
+  if(citasGuardadas)
+  {
+    setCitas(JSON.parse(citasGuardadas))
+  }
+},[])
+  
+
+  useEffect(() => {
+    if(citas?.length){
+      localStorage.setItem('citas', JSON.stringify(citas));
+    }
+  }, [citas]);
+
 
   const eliminarCita = (indice) => {
-    const nuevasCitas = citas.filter((_, i) => i !== indice);  //nos ayudaron a hacerlo e invesgigamos en google ya que no conociamos como se hacia
+    const nuevasCitas = citas.filter((_, i) => i !== indice);  
     setCitas(nuevasCitas);
+    localStorage.setItem(`citas`, JSON.stringify(nuevasCitas))
   };
 
   return (
