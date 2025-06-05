@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://NicolasBlaser.github.io/TPREACT1",
+  "homepage": "https://nicolasblaser.github.io/TpReact1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
